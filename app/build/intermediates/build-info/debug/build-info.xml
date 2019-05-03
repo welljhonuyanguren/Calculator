@@ -5,27 +5,35 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.4.0"
-    timestamp="1556791558621"
+    timestamp="1556860544425"
     token="-2035872254598653953"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="72" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="78" />
     <task
         name="verifier"
-        duration="0" />
+        duration="44" />
+
+    <artifact
+        location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1556790496918"
+        timestamp="1556857633731"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -66,8 +74,17 @@
     </build>
     <build
         build-mode="COLD"
+        ir-eligibility="FIELD_ADDED"
+        timestamp="1556860100206"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1556791133952"
+        timestamp="1556860544425"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -76,9 +93,5 @@
             location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1556791558621"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

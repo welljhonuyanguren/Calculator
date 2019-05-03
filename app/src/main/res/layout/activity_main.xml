@@ -12,7 +12,7 @@
     <TextView
             android:id="@+id/displayExpression"
             android:layout_width="match_parent"
-            android:layout_height="80sp"
+            android:layout_height="46dp"
             android:text=""
             android:gravity="end"
             android:maxLines="1"
@@ -21,7 +21,7 @@
     <TextView
             android:id="@+id/displayResult"
             android:layout_width="match_parent"
-            android:layout_height="100sp"
+            android:layout_height="119dp"
             android:text=""
             android:gravity="end"
             android:maxLines="1"
@@ -43,18 +43,21 @@
                     android:id="@+id/clear"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="clearall"
+                    android:onClick="clearAll"
             />
             <Button
                     android:text="@string/back"
                     android:id="@+id/back"
                     android:layout_weight="1"
-                    style="@style/buttonStyle"/>
+                    style="@style/buttonStyle"
+                   android:onClick="del"
+            />
             <Button
                     android:text="@string/percent"
                     android:id="@+id/percent"
                     android:layout_weight="1"
-                    style="@style/buttonStyle"/>
+                    style="@style/buttonStyle"
+                    android:onClick="percentClick"/>
             <Button
                     android:text="@string/div"
                     android:id="@+id/div"
@@ -175,7 +178,7 @@
                     android:id="@+id/dot"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-
+                    android:onClick="dotClick"
             />
 
             <Button
