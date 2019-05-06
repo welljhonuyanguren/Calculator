@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="119dp"
             android:text=""
+            android:textSize= "35sp"
             android:gravity="end"
             android:maxLines="1"
             android:textColor="@android:color/white"
@@ -43,27 +44,27 @@
                     android:id="@+id/clear"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="clearAll"
+                    android:onClick="buClean"
             />
             <Button
-                    android:text="@string/back"
-                    android:id="@+id/back"
+                    android:text="+/-"
+                    android:id="@+id/sign"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                   android:onClick="del"
+                   android:onClick="bunumberEvent"
             />
             <Button
                     android:text="@string/percent"
                     android:id="@+id/percent"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="percentClick"/>
+                    android:onClick="bupercent"/>
             <Button
                     android:text="@string/div"
                     android:id="@+id/div"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="operatorclick"/>
+                    android:onClick="buOpEvent"/>
 
         </LinearLayout>
         <LinearLayout
@@ -76,25 +77,25 @@
                     android:id="@+id/seven"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/eight"
                     android:id="@+id/eight"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/nine"
                     android:id="@+id/nine"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/mul"
                     android:id="@+id/mul"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="operatorclick"/>
+                    android:onClick="buOpEvent"/>
 
         </LinearLayout>
         <LinearLayout
@@ -107,25 +108,25 @@
                     android:id="@+id/four"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/five"
                     android:id="@+id/five"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/six"
                     android:id="@+id/six"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/sub"
                     android:id="@+id/sub"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="operatorclick"/>
+                    android:onClick="buOpEvent"/>
 
         </LinearLayout>
         <LinearLayout
@@ -138,25 +139,25 @@
                     android:id="@+id/one"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/two"
                     android:id="@+id/two"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/three"
                     android:id="@+id/three"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/add"
                     android:id="@+id/add"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="operatorclick"/>
+                    android:onClick="buOpEvent"/>
 
 
         </LinearLayout>
@@ -172,13 +173,13 @@
                     android:layout_weight="1"
                     style="@style/numberStyle"
                     android:layout_width="104sp"
-                    android:onClick="numberClick"/>
+                    android:onClick="bunumberEvent"/>
             <Button
                     android:text="@string/dot"
                     android:id="@+id/dot"
                     android:layout_weight="1"
                     style="@style/numberStyle"
-                    android:onClick="dotClick"
+                    android:onClick="bunumberEvent"
             />
 
             <Button
@@ -186,7 +187,7 @@
                     android:id="@+id/equal"
                     android:layout_weight="1"
                     style="@style/buttonStyle"
-                    android:onClick="equalClick"/>
+                    android:onClick="buEqualEvent"/>
         </LinearLayout>
 
     </LinearLayout>

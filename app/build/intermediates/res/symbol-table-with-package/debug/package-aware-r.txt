@@ -676,7 +676,6 @@ id alertTitle
 id all
 id always
 id async
-id back
 id barrier
 id beginning
 id blocking
@@ -776,6 +775,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id sign
 id six
 id spacer
 id split_action_bar
@@ -899,7 +899,6 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string add
 string app_name
-string back
 string div
 string dot
 string eight
@@ -912,6 +911,7 @@ string one
 string percent
 string search_menu_title
 string seven
+string sign
 string six
 string status_bar_notification_info_overflow
 string sub

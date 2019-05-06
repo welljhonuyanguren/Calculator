@@ -14,123 +14,128 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
-        var dotPresent: Boolean = false
-        var operationNumber: String= ""
-        var caNumber:String = ""
-        var screenNumber: Int = 0
-        var ansNumber: Int= 0
-        var secNumber: Int= 0
-        var performingOpe: CharSequence = ""
-        var performing: Boolean = false
-        var equal : Boolean = false
+    fun bunumberEvent(view:View){
+        if (isNewOp){
+            displayResult.setText("")
+        }
+        isNewOp=false
 
+        val buSelect = view as Button
+        var buClickValue:String = displayResult.text.toString()
 
+        when(buSelect.id){
+            zero.id->{
+                if (displayResult.text.toString().endsWith("0")){
+                    displayResult.setText("")
+                }else {
+                    buClickValue+="0"
+                }
+            }
+            one.id->{
+                buClickValue+="1"
+            }
+            two.id->{
+                buClickValue+="2"
+            }
+            three.id->{
+                buClickValue+="3"
+            }
+            four.id->{
+                buClickValue+="4"
+            }
+            five.id->{
+                buClickValue+="5"
+            }
+            six.id->{
+                buClickValue+="6"
+            }
+            seven.id->{
+                buClickValue+="7"
+            }
+            eight.id->{
+                buClickValue+="8"
+            }
+            nine.id->{
+                buClickValue+="9"
+            }
+            dot.id->{
+                if (displayResult.text.toString().endsWith(".")){
+                    displayResult.setText("")
+                }else {
+                    buClickValue+="."
+                }
+            }
+            sign.id->{
+                buClickValue="-" + buClickValue
+            }
+        }
+        displayResult.setText(buClickValue)
+    }
 
-    fun numberClick(view: View){
-        if (equal == false) {
-            if (performing == false) {
-                val button = view as Button
-                val numString = button.text
+    var op="*"
+    var oldNumber=""
+    var isNewOp =true
+    fun buOpEvent(view: View) {
+        val buSelect = view as Button
 
-                displayExpression.text = displayExpression.text.toString() + numString
-//        operationNumber = displayExpression.text.toString()
-            } else {
-                val button = view as Button
-                val numString = button.text
+        when (buSelect.id) {
+            mul.id -> {
+                op = "*"
+            }
 
-                displayResult.text = displayResult.text.toString() + numString
-//          caNumber = displayResult.text.toString()
+            div.id -> {
+                op = "÷"
+            }
+
+            sub.id -> {
+                op = "-"
+
+            }
+            add.id -> {
+                op = "+"
+
+            }
+
+        }
+        oldNumber=displayResult.text.toString()
+        isNewOp=true
+    }
+
+    fun buEqualEvent(view: View){
+        val newNumber=displayResult.text.toString()
+        var answer:Double?=null
+        when(op){
+            "*"->{
+                answer=oldNumber.toDouble() * newNumber.toDouble()
+
+            }
+            "÷"->{
+                answer=oldNumber.toDouble() / newNumber.toDouble()
+
+            }
+            "+"->{
+                answer=oldNumber.toDouble() + newNumber.toDouble()
+
+            }
+            "-"->{
+                answer=oldNumber.toDouble() - newNumber.toDouble()
+
             }
         }
 
-        else {
-            displayExpression.text = ""
-            displayResult.text = ""
-            dotPresent= false
-            performing = false
-            equal == false
-            operationNumber =""
-            caNumber = ""
-            screenNumber= 0
-            ansNumber= 0
-        }
-    }
-
-    fun dotClick(view: View) {
-        if (dotPresent == false) {
-            if (performing == false) {
-                val button = view as Button
-                val numString = button.text
-
-                displayExpression.text = displayExpression.text.toString() + numString
-                operationNumber = displayExpression.text.toString()
-            } else {
-                val button = view as Button
-                val numString = button.text
-
-                displayResult.text = displayResult.text.toString() + numString
-                caNumber = displayResult.text.toString()
-            }
-            dotPresent = true
-        }
-    }
-
-
-    fun operatorclick(view: View){
-        val button = view as Button
-        performingOpe = button.text
-        ansNumber = operationNumber.toInt()
-        performing = true
-
+        displayResult.setText(answer.toString())
+        isNewOp=true
 
     }
 
-
-
-    fun clearAll(view: View){
-        displayExpression.text = ""
-        displayResult.text = ""
-        dotPresent= false
-        performing = false
-        equal == false
-        operationNumber =""
-        caNumber = ""
-        screenNumber= 0
-        ansNumber= 0
+    fun bupercent(view: View){
+        val number:Double=displayResult.text.toString().toDouble()/100
+        displayResult.setText(number.toString())
+        isNewOp=true
     }
 
-    fun del(view: View){
-
-            val string = displayExpression.text.toString()
-            if (string.isNotEmpty()){
-                displayExpression.text = string.substring(0,string.length-1)
-            }
+    fun buClean(view: View){
+        displayResult.setText("")
+        isNewOp=true
     }
-
-    fun equalClick(){
-        secNumber = caNumber.toInt()
-        if (performingOpe == "+"){
-            ansNumber +=  secNumber
-        }
-        else if (performingOpe == "-"){
-            ansNumber -= secNumber
-        }
-        else if (performingOpe == "*"){
-            ansNumber *= secNumber
-        }
-        else if (performingOpe == "÷"){
-            ansNumber /= secNumber
-        }
-        displayResult.text = ansNumber.toString()
-        displayExpression.text = ""
-        equal = true
-
-    }
-    fun percentClick(){
-        ansNumber /= 100
-        displayResult.text = ansNumber.toString()
-        displayExpression.text = ""
-        equal = true
-    }
-
 }

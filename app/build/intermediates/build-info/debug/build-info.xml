@@ -5,35 +5,31 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.4.0"
-    timestamp="1556860544425"
+    timestamp="1556869075233"
     token="-2035872254598653953"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="72" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="78" />
+        duration="0" />
     <task
         name="verifier"
-        duration="44" />
+        duration="0" />
 
-    <artifact
-        location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
     <artifact
         location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1556857633731"
+        timestamp="1556865796145"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -74,21 +70,41 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1556860100206"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1556866869100"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1556860544425"
+        timestamp="1556868259787"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1556869075233"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\USER\AndroidStudioProjects\calculator\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />

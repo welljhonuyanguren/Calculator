@@ -17,6 +17,6 @@
     <string name="div">÷</string>
     <string name="equal">=</string>
     <string name="percent">%</string>
-    <string name="back">del</string>
+    <string name="sign">+/-</string>
 
 </resources>
