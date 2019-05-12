@@ -25,11 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         when(buSelect.id){
             zero.id->{
-                if (displayResult.text.toString().endsWith("0")){
-                    displayResult.setText("")
-                }else {
                     buClickValue+="0"
-                }
             }
             one.id->{
                 buClickValue+="1"
